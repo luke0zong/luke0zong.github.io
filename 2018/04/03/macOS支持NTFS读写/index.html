@@ -106,25 +106,25 @@
 
 
 
-  <meta name="description" content="测试在Github Pages上利用Hexo部署静态blog。">
-<meta name="keywords" content="Hexo,Github">
+  <meta name="description" content="macOS下支持NTFS读写的几种解决办法：osxfuse w/ NTFS-3GFuse for macOS 可让macOS支援第三方文件系统。 FUSE 安装Homebrew:12brew install autoconf automake libtool gettextbrew link --force gettext NTFS-3G 安装1brew install ntfs-3g 手动mou">
+<meta name="keywords" content="macOS,NTFS,FUSE">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello Hexo">
-<meta property="og:url" content="http://ggwp.us/2018/04/02/Hello-Hexo/index.html">
+<meta property="og:title" content="macOS支持NTFS读写">
+<meta property="og:url" content="http://ggwp.us/2018/04/03/macOS支持NTFS读写/index.html">
 <meta property="og:site_name" content="Z&#39;s Place">
-<meta property="og:description" content="测试在Github Pages上利用Hexo部署静态blog。">
+<meta property="og:description" content="macOS下支持NTFS读写的几种解决办法：osxfuse w/ NTFS-3GFuse for macOS 可让macOS支援第三方文件系统。 FUSE 安装Homebrew:12brew install autoconf automake libtool gettextbrew link --force gettext NTFS-3G 安装1brew install ntfs-3g 手动mou">
 <meta property="og:locale" content="_en">
-<meta property="og:updated_time" content="2018-04-03T02:46:25.000Z">
+<meta property="og:updated_time" content="2018-04-04T01:22:01.135Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello Hexo">
-<meta name="twitter:description" content="测试在Github Pages上利用Hexo部署静态blog。">
+<meta name="twitter:title" content="macOS支持NTFS读写">
+<meta name="twitter:description" content="macOS下支持NTFS读写的几种解决办法：osxfuse w/ NTFS-3GFuse for macOS 可让macOS支援第三方文件系统。 FUSE 安装Homebrew:12brew install autoconf automake libtool gettextbrew link --force gettext NTFS-3G 安装1brew install ntfs-3g 手动mou">
 
 
 
 
 
 
-  <link rel="canonical" href="http://ggwp.us/2018/04/02/Hello-Hexo/"/>
+  <link rel="canonical" href="http://ggwp.us/2018/04/03/macOS支持NTFS读写/"/>
 
 
 
@@ -134,7 +134,7 @@
   };
 </script>
 
-  <title>Hello Hexo | Z's Place</title>
+  <title>macOS支持NTFS读写 | Z's Place</title>
   
 
 
@@ -340,7 +340,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ggwp.us/2018/04/02/Hello-Hexo/">
+    <link itemprop="mainEntityOfPage" href="http://ggwp.us/2018/04/03/macOS支持NTFS读写/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="luke0zong">
@@ -357,7 +357,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello Hexo</h1>
+          <h1 class="post-title" itemprop="name headline">macOS支持NTFS读写</h1>
         
 
         <div class="post-meta">
@@ -369,7 +369,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-02T20:46:25-06:00">2018-04-02</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-03T18:46:06-06:00">2018-04-03</time>
             
 
             
@@ -424,7 +424,14 @@
       
 
       
-        <p>测试在Github Pages上利用Hexo部署静态blog。</p>
+        <h1 id="macOS下支持NTFS读写的几种解决办法："><a href="#macOS下支持NTFS读写的几种解决办法：" class="headerlink" title="macOS下支持NTFS读写的几种解决办法："></a>macOS下支持NTFS读写的几种解决办法：</h1><h2 id="osxfuse-w-NTFS-3G"><a href="#osxfuse-w-NTFS-3G" class="headerlink" title="osxfuse w/ NTFS-3G"></a>osxfuse w/ NTFS-3G</h2><p>Fuse for macOS 可让macOS支援第三方文件系统。</p>
+<h3 id="FUSE-安装"><a href="#FUSE-安装" class="headerlink" title="FUSE 安装"></a>FUSE 安装</h3><p>Homebrew:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew install autoconf automake libtool gettext</span><br><span class="line">brew link --force gettext</span><br></pre></td></tr></table></figure></p>
+<h3 id="NTFS-3G-安装"><a href="#NTFS-3G-安装" class="headerlink" title="NTFS-3G 安装"></a>NTFS-3G 安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install ntfs-3g</span><br></pre></td></tr></table></figure>
+<h3 id="手动mount-NTFS分区："><a href="#手动mount-NTFS分区：" class="headerlink" title="手动mount NTFS分区："></a>手动mount NTFS分区：</h3><p>查找NTFS分区名，使用命令：<code>diskutil list</code><br>如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">diskutil list</span><br><span class="line">/dev/disk0 (internal):</span><br><span class="line">   #:                       TYPE NAME                    SIZE       IDENTIFIER</span><br><span class="line">   0:      GUID_partition_scheme                         500.3 GB   disk0</span><br><span class="line">   1:                        EFI EFI                     314.6 MB   disk0s1</span><br><span class="line">   2:                 Apple_APFS Container disk1         339.9 GB   disk0s2</span><br><span class="line">   3:       Microsoft Basic Data BOOTCAMP                160.1 GB   disk0s3</span><br><span class="line"></span><br><span class="line">/dev/disk1 (synthesized):</span><br><span class="line">   #:                       TYPE NAME                    SIZE       IDENTIFIER</span><br><span class="line">   0:      APFS Container Scheme -                      +339.9 GB   disk1</span><br><span class="line">                                 Physical Store disk0s2</span><br><span class="line">   1:                APFS Volume Macintosh HD            319.6 GB   disk1s1</span><br><span class="line">   2:                APFS Volume Preboot                 23.4 MB    disk1s2</span><br><span class="line">   3:                APFS Volume Recovery                517.8 MB   disk1s3</span><br><span class="line">   4:                APFS Volume VM                      6.4 GB     disk1s4</span><br><span class="line"></span><br><span class="line">/dev/disk2 (external, physical):</span><br><span class="line">   #:                       TYPE NAME                    SIZE       IDENTIFIER</span><br><span class="line">   0:      GUID_partition_scheme                        *5.0 TB     disk2</span><br><span class="line">   1:         Microsoft Reserved                         134.2 MB   disk2s1</span><br><span class="line">   2:       Microsoft Basic Data Backup 5Tb              5.0 TB     disk2s2</span><br></pre></td></tr></table></figure></p>
+<p>目标卷名为<code>/dev/disk2s2</code>，容量5T。</p>
+<p>首先创建挂载路径，如<code>/Volumes/5T</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir /Volumes/5T</span><br></pre></td></tr></table></figure></p>
+<p>挂载NTFS分区，设置读写权限<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /usr/local/bin/ntfs-3g /dev/disk2s2 /Volumes/5T -olocal -oallow_other</span><br></pre></td></tr></table></figure></p>
+<p>*注意，如果所需分区已经被mount到系统，需要先unmount：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">diskutil unmount /dev/disk2s2</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -445,9 +452,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+            <a href="/tags/macOS/" rel="tag"># macOS</a>
           
-            <a href="/tags/Github/" rel="tag"># Github</a>
+            <a href="/tags/NTFS/" rel="tag"># NTFS</a>
+          
+            <a href="/tags/FUSE/" rel="tag"># FUSE</a>
           
         </div>
       
@@ -460,15 +469,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/04/02/Hello-Hexo/" rel="next" title="Hello Hexo">
+                <i class="fa fa-chevron-left"></i> Hello Hexo
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/03/macOS支持NTFS读写/" rel="prev" title="macOS支持NTFS读写">
-                macOS支持NTFS读写 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -517,8 +526,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -615,6 +633,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#macOS下支持NTFS读写的几种解决办法："><span class="nav-number">1.</span> <span class="nav-text">macOS下支持NTFS读写的几种解决办法：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#osxfuse-w-NTFS-3G"><span class="nav-number">1.1.</span> <span class="nav-text">osxfuse w/ NTFS-3G</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#FUSE-安装"><span class="nav-number">1.1.1.</span> <span class="nav-text">FUSE 安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NTFS-3G-安装"><span class="nav-number">1.1.2.</span> <span class="nav-text">NTFS-3G 安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#手动mount-NTFS分区："><span class="nav-number">1.1.3.</span> <span class="nav-text">手动mount NTFS分区：</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

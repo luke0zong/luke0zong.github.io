@@ -237,7 +237,7 @@
           
   <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags<span class="badge">1</span>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags<span class="badge">5</span>
       </a>
 </li>
 
@@ -247,7 +247,7 @@
           
   <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Categories<span class="badge">0</span>
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Categories<span class="badge">1</span>
       </a>
 </li>
 
@@ -257,7 +257,7 @@
           
   <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives<span class="badge">1</span>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives<span class="badge">2</span>
       </a>
 </li>
 
@@ -336,6 +336,155 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://ggwp.us/2018/04/03/macOS支持NTFS读写/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="luke0zong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z's Place">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/03/macOS支持NTFS读写/" itemprop="url">macOS支持NTFS读写</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-03T18:46:06-06:00">2018-04-03</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Notes/" itemprop="url" rel="index"><span itemprop="name">Notes</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="macOS下支持NTFS读写的几种解决办法："><a href="#macOS下支持NTFS读写的几种解决办法：" class="headerlink" title="macOS下支持NTFS读写的几种解决办法："></a>macOS下支持NTFS读写的几种解决办法：</h1><h2 id="osxfuse-w-NTFS-3G"><a href="#osxfuse-w-NTFS-3G" class="headerlink" title="osxfuse w/ NTFS-3G"></a>osxfuse w/ NTFS-3G</h2><p>Fuse for macOS 可让macOS支援第三方文件系统。</p>
+<h3 id="FUSE-安装"><a href="#FUSE-安装" class="headerlink" title="FUSE 安装"></a>FUSE 安装</h3><p>Homebrew:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew install autoconf automake libtool gettext</span><br><span class="line">brew link --force gettext</span><br></pre></td></tr></table></figure></p>
+<h3 id="NTFS-3G-安装"><a href="#NTFS-3G-安装" class="headerlink" title="NTFS-3G 安装"></a>NTFS-3G 安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install ntfs-3g</span><br></pre></td></tr></table></figure>
+<h3 id="手动mount-NTFS分区："><a href="#手动mount-NTFS分区：" class="headerlink" title="手动mount NTFS分区："></a>手动mount NTFS分区：</h3><p>查找NTFS分区名，使用命令：<code>diskutil list</code><br>如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">diskutil list</span><br><span class="line">/dev/disk0 (internal):</span><br><span class="line">   #:                       TYPE NAME                    SIZE       IDENTIFIER</span><br><span class="line">   0:      GUID_partition_scheme                         500.3 GB   disk0</span><br><span class="line">   1:                        EFI EFI                     314.6 MB   disk0s1</span><br><span class="line">   2:                 Apple_APFS Container disk1         339.9 GB   disk0s2</span><br><span class="line">   3:       Microsoft Basic Data BOOTCAMP                160.1 GB   disk0s3</span><br><span class="line"></span><br><span class="line">/dev/disk1 (synthesized):</span><br><span class="line">   #:                       TYPE NAME                    SIZE       IDENTIFIER</span><br><span class="line">   0:      APFS Container Scheme -                      +339.9 GB   disk1</span><br><span class="line">                                 Physical Store disk0s2</span><br><span class="line">   1:                APFS Volume Macintosh HD            319.6 GB   disk1s1</span><br><span class="line">   2:                APFS Volume Preboot                 23.4 MB    disk1s2</span><br><span class="line">   3:                APFS Volume Recovery                517.8 MB   disk1s3</span><br><span class="line">   4:                APFS Volume VM                      6.4 GB     disk1s4</span><br><span class="line"></span><br><span class="line">/dev/disk2 (external, physical):</span><br><span class="line">   #:                       TYPE NAME                    SIZE       IDENTIFIER</span><br><span class="line">   0:      GUID_partition_scheme                        *5.0 TB     disk2</span><br><span class="line">   1:         Microsoft Reserved                         134.2 MB   disk2s1</span><br><span class="line">   2:       Microsoft Basic Data Backup 5Tb              5.0 TB     disk2s2</span><br></pre></td></tr></table></figure></p>
+<p>目标卷名为<code>/dev/disk2s2</code>，容量5T。</p>
+<p>首先创建挂载路径，如<code>/Volumes/5T</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir /Volumes/5T</span><br></pre></td></tr></table></figure></p>
+<p>挂载NTFS分区，设置读写权限<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /usr/local/bin/ntfs-3g /dev/disk2s2 /Volumes/5T -olocal -oallow_other</span><br></pre></td></tr></table></figure></p>
+<p>*注意，如果所需分区已经被mount到系统，需要先unmount：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">diskutil unmount /dev/disk2s2</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://ggwp.us/2018/04/02/Hello-Hexo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -376,6 +525,24 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Notes/" itemprop="url" rel="index"><span itemprop="name">Notes</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -492,12 +659,25 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
               
 
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
               
 
               
@@ -509,7 +689,15 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
