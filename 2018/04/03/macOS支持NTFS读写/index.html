@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="_en">
+<html class="theme-next gemini use-motion" lang="_en">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -59,16 +59,16 @@
 <link href="/css/main.css?v=6.1.0" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-icon-z.png?v=6.1.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/z-32x32.png?v=6.1.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.1.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/z-16x16.png?v=6.1.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=6.1.0" color="#222">
+  <link rel="mask-icon" href="/images/z.svg?v=6.1.0" color="#222">
 
 
 
@@ -82,7 +82,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
+    scheme: 'Gemini',
     version: '6.1.0',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: false,
@@ -106,18 +106,18 @@
 
 
 
-  <meta name="description" content="本文记录macOS下支持NTFS读写的几种解决办法。 付费软件：Paragon NTFS for Mac售价 $19.95，10天免费试用。 节省时间，一劳永逸的解决方案。链接： 开启macOS系统原生支持macOS内是有原生支持的，只不过因为微软版权的关系，并不开放，需要手动开启。 osxfuse w/ NTFS-3G [注意：此模式写入速度很慢！]Fuse for macOS 可让macOS支">
+  <meta name="description" content="本文记录macOS下支持NTFS读写的几种解决办法。 一、付费软件：Paragon NTFS for Mac售价 $19.95，10天免费试用。 节省时间，一劳永逸的解决方案。链接：https://www.paragon-software.com/home/ntfs-mac/">
 <meta name="keywords" content="macOS,NTFS,FUSE">
 <meta property="og:type" content="article">
 <meta property="og:title" content="macOS支持NTFS读写">
 <meta property="og:url" content="http://ggwp.us/2018/04/03/macOS支持NTFS读写/index.html">
-<meta property="og:site_name" content="Z&#39;s Place">
-<meta property="og:description" content="本文记录macOS下支持NTFS读写的几种解决办法。 付费软件：Paragon NTFS for Mac售价 $19.95，10天免费试用。 节省时间，一劳永逸的解决方案。链接： 开启macOS系统原生支持macOS内是有原生支持的，只不过因为微软版权的关系，并不开放，需要手动开启。 osxfuse w/ NTFS-3G [注意：此模式写入速度很慢！]Fuse for macOS 可让macOS支">
+<meta property="og:site_name" content="Z&#39;s Blog">
+<meta property="og:description" content="本文记录macOS下支持NTFS读写的几种解决办法。 一、付费软件：Paragon NTFS for Mac售价 $19.95，10天免费试用。 节省时间，一劳永逸的解决方案。链接：https://www.paragon-software.com/home/ntfs-mac/">
 <meta property="og:locale" content="_en">
-<meta property="og:updated_time" content="2018-04-04T05:45:25.670Z">
+<meta property="og:updated_time" content="2018-04-05T07:21:51.649Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="macOS支持NTFS读写">
-<meta name="twitter:description" content="本文记录macOS下支持NTFS读写的几种解决办法。 付费软件：Paragon NTFS for Mac售价 $19.95，10天免费试用。 节省时间，一劳永逸的解决方案。链接： 开启macOS系统原生支持macOS内是有原生支持的，只不过因为微软版权的关系，并不开放，需要手动开启。 osxfuse w/ NTFS-3G [注意：此模式写入速度很慢！]Fuse for macOS 可让macOS支">
+<meta name="twitter:description" content="本文记录macOS下支持NTFS读写的几种解决办法。 一、付费软件：Paragon NTFS for Mac售价 $19.95，10天免费试用。 节省时间，一劳永逸的解决方案。链接：https://www.paragon-software.com/home/ntfs-mac/">
 
 
 
@@ -134,7 +134,7 @@
   };
 </script>
 
-  <title>macOS支持NTFS读写 | Z's Place</title>
+  <title>macOS支持NTFS读写 | Z's Blog</title>
   
 
 
@@ -194,7 +194,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Z's Place</span>
+        <span class="site-title">Z's Blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -285,6 +285,17 @@
     </header>
 
     
+  
+  
+  
+    
+      
+    
+    <a href="https://github.com/luke0zong" class="github-corner" target="_blank" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#222; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg>
+    
+      </a>
+    
+
 
 
     <main id="main" class="main">
@@ -316,13 +327,13 @@
     <link itemprop="mainEntityOfPage" href="http://ggwp.us/2018/04/03/macOS支持NTFS读写/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="luke0zong">
+      <meta itemprop="name" content="Yaowei Zong">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/z.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Z's Place">
+      <meta itemprop="name" content="Z's Blog">
     </span>
 
     
@@ -398,10 +409,15 @@
 
       
         <p>本文记录macOS下支持NTFS读写的几种解决办法。</p>
-<h2 id="付费软件：Paragon-NTFS-for-Mac"><a href="#付费软件：Paragon-NTFS-for-Mac" class="headerlink" title="付费软件：Paragon NTFS for Mac"></a>付费软件：Paragon NTFS for Mac</h2><p>售价 $19.95，10天免费试用。</p>
-<p>节省时间，一劳永逸的解决方案。链接：</p>
-<h2 id="开启macOS系统原生支持"><a href="#开启macOS系统原生支持" class="headerlink" title="开启macOS系统原生支持"></a>开启macOS系统原生支持</h2><p>macOS内是有原生支持的，只不过因为微软版权的关系，并不开放，需要手动开启。</p>
-<h2 id="osxfuse-w-NTFS-3G-注意：此模式写入速度很慢！"><a href="#osxfuse-w-NTFS-3G-注意：此模式写入速度很慢！" class="headerlink" title="osxfuse w/ NTFS-3G [注意：此模式写入速度很慢！]"></a>osxfuse w/ NTFS-3G [注意：此模式写入速度很慢！]</h2><p>Fuse for macOS 可让macOS支援第三方文件系统。<br><a id="more"></a></p>
+<h2 id="一、付费软件：Paragon-NTFS-for-Mac"><a href="#一、付费软件：Paragon-NTFS-for-Mac" class="headerlink" title="一、付费软件：Paragon NTFS for Mac"></a>一、付费软件：Paragon NTFS for Mac</h2><p>售价 $19.95，10天免费试用。</p>
+<p>节省时间，一劳永逸的解决方案。链接：<a href="https://www.paragon-software.com/home/ntfs-mac/" target="_blank" rel="noopener">https://www.paragon-software.com/home/ntfs-mac/</a><br><a id="more"></a></p>
+<h2 id="二、macOS系统原生支持"><a href="#二、macOS系统原生支持" class="headerlink" title="二、macOS系统原生支持"></a>二、macOS系统原生支持</h2><p>macOS内是有原生支持的，只不过因为微软版权的关系，并不开放，需要手动开启。<br>【注：每次插入新硬盘均需要手动处理一遍】</p>
+<h3 id="找到硬盘名"><a href="#找到硬盘名" class="headerlink" title="找到硬盘名"></a>找到硬盘名</h3><p>直接打开Finder在Devices下直接找到，或者<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">~  diskutil list</span><br><span class="line">/dev/disk0 (internal):</span><br><span class="line">  #:                       TYPE NAME                    SIZE       IDENTIFIER</span><br><span class="line">  0:      GUID_partition_scheme                         500.3 GB   disk0</span><br><span class="line">  1:                        EFI EFI                     314.6 MB   disk0s1</span><br><span class="line">  2:                 Apple_APFS Container disk1         500.0 GB   disk0s2</span><br><span class="line"></span><br><span class="line">/dev/disk1 (synthesized):</span><br><span class="line">  #:                       TYPE NAME                    SIZE       IDENTIFIER</span><br><span class="line">  0:      APFS Container Scheme -                      +500.0 GB   disk1</span><br><span class="line">                                Physical Store disk0s2</span><br><span class="line">  1:                APFS Volume Macintosh HD            322.9 GB   disk1s1</span><br><span class="line">  2:                APFS Volume Preboot                 23.4 MB    disk1s2</span><br><span class="line">  3:                APFS Volume Recovery                517.8 MB   disk1s3</span><br><span class="line">  4:                APFS Volume VM                      3.2 GB     disk1s4</span><br><span class="line"></span><br><span class="line">/dev/disk3 (external, physical):</span><br><span class="line">  #:                       TYPE NAME                    SIZE       IDENTIFIER</span><br><span class="line">  0:      GUID_partition_scheme                        *500.1 GB   disk3</span><br><span class="line">  1:                        EFI EFI                     209.7 MB   disk3s1</span><br><span class="line">  2:                  Apple_HFS TimeCapsule             499.8 GB   disk3s2</span><br></pre></td></tr></table></figure></p>
+<h3 id="修改-etc-fstab-文件"><a href="#修改-etc-fstab-文件" class="headerlink" title="修改 /etc/fstab 文件"></a>修改 /etc/fstab 文件</h3><p>通过修改fstab文件，添加如下命令开启写入权限：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /etc/fstab</span><br><span class="line"></span><br><span class="line">LABEL=NAME none ntfs rw,auto,nobrowse</span><br></pre></td></tr></table></figure></p>
+<p>如果卷名包含空格，以“\040”代替，如<code>LABEL=Disk\040Name</code></p>
+<h3 id="重新插拔硬盘"><a href="#重新插拔硬盘" class="headerlink" title="重新插拔硬盘"></a>重新插拔硬盘</h3><p>重新插拔硬盘激活新mount规则，由于<code>nobrowse</code>，硬盘并不会在桌面或Finder里显示。</p>
+<p>可通过<code>open /Volumes/Name</code>打开，或添加软链接：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s /Volumes/Name/ ~/Desktop/Name</span><br></pre></td></tr></table></figure></p>
+<h2 id="三、osxfuse-w-NTFS-3G-注意：此模式写入速度很慢！"><a href="#三、osxfuse-w-NTFS-3G-注意：此模式写入速度很慢！" class="headerlink" title="三、osxfuse w/ NTFS-3G [注意：此模式写入速度很慢！]"></a>三、osxfuse w/ NTFS-3G [注意：此模式写入速度很慢！]</h2><p>Fuse for macOS 可让macOS支援第三方文件系统。</p>
 <h3 id="FUSE-安装"><a href="#FUSE-安装" class="headerlink" title="FUSE 安装"></a>FUSE 安装</h3><p>Homebrew:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew install autoconf automake libtool gettext</span><br><span class="line">brew link --force gettext</span><br></pre></td></tr></table></figure></p>
 <h3 id="NTFS-3G-安装"><a href="#NTFS-3G-安装" class="headerlink" title="NTFS-3G 安装"></a>NTFS-3G 安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install ntfs-3g</span><br></pre></td></tr></table></figure>
 <h3 id="手动mount-NTFS分区："><a href="#手动mount-NTFS分区：" class="headerlink" title="手动mount NTFS分区："></a>手动mount NTFS分区：</h3><p>查找NTFS分区名，使用命令：<code>diskutil list</code><br>如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">diskutil list</span><br><span class="line">/dev/disk0 (internal):</span><br><span class="line">   #:                       TYPE NAME                    SIZE       IDENTIFIER</span><br><span class="line">   0:      GUID_partition_scheme                         500.3 GB   disk0</span><br><span class="line">   1:                        EFI EFI                     314.6 MB   disk0s1</span><br><span class="line">   2:                 Apple_APFS Container disk1         339.9 GB   disk0s2</span><br><span class="line">   3:       Microsoft Basic Data BOOTCAMP                160.1 GB   disk0s3</span><br><span class="line"></span><br><span class="line">/dev/disk1 (synthesized):</span><br><span class="line">   #:                       TYPE NAME                    SIZE       IDENTIFIER</span><br><span class="line">   0:      APFS Container Scheme -                      +339.9 GB   disk1</span><br><span class="line">                                 Physical Store disk0s2</span><br><span class="line">   1:                APFS Volume Macintosh HD            319.6 GB   disk1s1</span><br><span class="line">   2:                APFS Volume Preboot                 23.4 MB    disk1s2</span><br><span class="line">   3:                APFS Volume Recovery                517.8 MB   disk1s3</span><br><span class="line">   4:                APFS Volume VM                      6.4 GB     disk1s4</span><br><span class="line"></span><br><span class="line">/dev/disk2 (external, physical):</span><br><span class="line">   #:                       TYPE NAME                    SIZE       IDENTIFIER</span><br><span class="line">   0:      GUID_partition_scheme                        *5.0 TB     disk2</span><br><span class="line">   1:         Microsoft Reserved                         134.2 MB   disk2s1</span><br><span class="line">   2:       Microsoft Basic Data Backup 5Tb              5.0 TB     disk2s2</span><br></pre></td></tr></table></figure></p>
@@ -423,6 +439,20 @@
 
     
 
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author: </strong>Yaowei Zong</li>
+  <li class="post-copyright-link">
+    <strong>Post link:</strong>
+    <a href="http://ggwp.us/2018/04/03/macOS支持NTFS读写/" title="macOS支持NTFS读写">http://ggwp.us/2018/04/03/macOS支持NTFS读写/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice: </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> unless stating additionally.</li>
+</ul>
+
+      </div>
     
 
     <footer class="post-footer">
@@ -518,11 +548,11 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image"
-                src="/images/avatar.gif"
-                alt="luke0zong" />
+                src="/images/z.jpg"
+                alt="Yaowei Zong" />
             
-              <p class="site-author-name" itemprop="name">luke0zong</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-author-name" itemprop="name">Yaowei Zong</p>
+              <p class="site-description motion-element" itemprop="description">Stay Young at Heart</p>
           </div>
 
           
@@ -593,6 +623,11 @@
                   
                 </span>
               
+                <span class="links-of-author-item">
+                  <a href="https://weibo.com/palz" target="_blank" title="Weibo"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                  
+                </span>
+              
             </div>
           
 
@@ -609,7 +644,7 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf" title="Markdown" target="_blank">Markdown</a>
+                    <a href="https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf" title="Markdown Cheatsheet" target="_blank">Markdown Cheatsheet</a>
                   </li>
                 
               </ul>
@@ -634,7 +669,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#付费软件：Paragon-NTFS-for-Mac"><span class="nav-number">1.</span> <span class="nav-text">付费软件：Paragon NTFS for Mac</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开启macOS系统原生支持"><span class="nav-number">2.</span> <span class="nav-text">开启macOS系统原生支持</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#osxfuse-w-NTFS-3G-注意：此模式写入速度很慢！"><span class="nav-number">3.</span> <span class="nav-text">osxfuse w/ NTFS-3G [注意：此模式写入速度很慢！]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#FUSE-安装"><span class="nav-number">3.1.</span> <span class="nav-text">FUSE 安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NTFS-3G-安装"><span class="nav-number">3.2.</span> <span class="nav-text">NTFS-3G 安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#手动mount-NTFS分区："><span class="nav-number">3.3.</span> <span class="nav-text">手动mount NTFS分区：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、付费软件：Paragon-NTFS-for-Mac"><span class="nav-number">1.</span> <span class="nav-text">一、付费软件：Paragon NTFS for Mac</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、macOS系统原生支持"><span class="nav-number">2.</span> <span class="nav-text">二、macOS系统原生支持</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#找到硬盘名"><span class="nav-number">2.1.</span> <span class="nav-text">找到硬盘名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改-etc-fstab-文件"><span class="nav-number">2.2.</span> <span class="nav-text">修改 /etc/fstab 文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重新插拔硬盘"><span class="nav-number">2.3.</span> <span class="nav-text">重新插拔硬盘</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、osxfuse-w-NTFS-3G-注意：此模式写入速度很慢！"><span class="nav-number">3.</span> <span class="nav-text">三、osxfuse w/ NTFS-3G [注意：此模式写入速度很慢！]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#FUSE-安装"><span class="nav-number">3.1.</span> <span class="nav-text">FUSE 安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NTFS-3G-安装"><span class="nav-number">3.2.</span> <span class="nav-text">NTFS-3G 安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#手动mount-NTFS分区："><span class="nav-number">3.3.</span> <span class="nav-text">手动mount NTFS分区：</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -658,7 +693,7 @@
   <span class="with-love" id="animate"> 
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">luke0zong</span>
+  <span class="author" itemprop="copyrightHolder">Yaowei Zong</span>
 
   
 
@@ -676,7 +711,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.1.0</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Gemini</a> v6.1.0</div>
 
 
 
